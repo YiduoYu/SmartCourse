@@ -1,3 +1,4 @@
+import os
 from datetime import datetime
 import smtplib
 from email.message import EmailMessage
@@ -11,8 +12,8 @@ def send_enrollment_email(to_email, message_body):
     # SMTP configuration for QQ email
     smtp_server = "smtp.qq.com"
     smtp_port = 587
-    sender_email = "***REMOVED***"
-    sender_password = "***REMOVED***"
+    sender_email = os.environ.get("SMTP_USER")
+    sender_password = os.environ.get("SMTP_PASSWORD")
 
     msg = EmailMessage()
     msg['Subject'] = 'SmartCourse Enrollment Notification'
@@ -29,8 +30,8 @@ def send_enrollment_email(to_email, message_body):
 def send_grade_email(to_email, message_body):
     smtp_server = "smtp.qq.com"
     smtp_port = 587
-    sender_email = "***REMOVED***"
-    sender_password = "***REMOVED***"
+    sender_email = os.environ.get("SMTP_USER")
+    sender_password = os.environ.get("SMTP_PASSWORD")
 
     msg = EmailMessage()
     msg['Subject'] = 'SmartCourse Grading Notification'
