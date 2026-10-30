@@ -1,8 +1,12 @@
-# CPS3320-SmartCourse_AI_Course_Advisor
+# SmartCourse: Context-Aware LLM Course Advising
 
 Final project for **CPS 3320 Python Programming** at Wenzhou-Kean University.
 
-**SmartCourse** is a course management system for students and instructors with an AI advising module. A locally deployed LLM (`deepseek-r1:1.5b` via Ollama) reads a student's transcript and the major's study plan, then recommends the next courses to take.
+**SmartCourse** is a course management system for students and instructors with an AI advising module. A locally hosted LLM (`deepseek-r1:1.5b` via Ollama) is prompted with the student's transcript and the four-year plan of their major, then recommends the next courses to take.
+
+## Evaluation
+
+We compared four context settings for the advising prompt on 25 advising queries for one student profile. Relevance was measured by **PersonalScore**, how well a recommendation reflects the student's own record and degree plan. Giving the model the full context (transcript and degree plan) raised PersonalScore from **0.04 to 0.78**.
 
 ## Features
 - **Accounts**: registration restricted to `@kean.edu` addresses; instructors need a verification code
