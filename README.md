@@ -1,6 +1,6 @@
 # SmartCourse: Context-Aware LLM Course Advising
 
-Final project for **CPS 3320 Python Programming** at Wenzhou-Kean University.
+Co-developed at Wenzhou-Kean University, June–July 2025.
 
 **SmartCourse** is a course management system for students and instructors with an AI advising module. A locally hosted LLM (`deepseek-r1:1.5b` via Ollama) is prompted with the student's transcript and the four-year plan of their major, then recommends the next courses to take.
 
